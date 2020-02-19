@@ -1,0 +1,30 @@
+@keyframes header-text-anim{
+    to{
+        color: rgb(255, 201, 14);
+    }
+}
+@keyframes header-img-anim{
+    to{
+        background-color: rgb(255, 201, 14);
+    }
+}
+
+@keyframes nav-bg-anim{
+    to{
+        background-color: rgb(255, 201, 14);
+    }
+}
+@keyframes card-precio-anim{
+    to{
+        background-color: rgb(255, 221, 112);
+    }
+}
+
+@font-face{
+    font-family: loaded;
+    src: url(../fuentes/loaded.ttf);
+}
+@font-face{
+    font-family: title;
+    src: url(../fuentes/title.otf);
+}

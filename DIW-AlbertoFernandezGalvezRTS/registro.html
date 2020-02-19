@@ -1,0 +1,291 @@
+<!--
+     Proyecto: Miniproyecto Final 
+     Título: Rebooting the Strap
+     Asignatura: Diseño de interfaces web
+     Archivo: registro.html
+     Autor: Alberto Fernández Gálvez @albertoFer97
+     Fecha: Enero 2020
+     Descripción: Miniproyecto de Bootstrap
+-->
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<!-- Guardamos toda la llamada a otros programas-->
+
+<head>
+
+  <title>Registro</title>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="config/css/bootstrap.min.css">
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/keyframes.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/drag-drop.css">
+  <link rel="stylesheet" href="config/css/jquery-ui.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+
+</head>
+
+<body>
+  <!-- CONTAINER -->
+  <div class="container-fluid bg-color">
+    <div class="row" id="identificacion">
+      <div class="offset-0 col-12 offset-md-3 col-md-6 offset-lg-4 col-lg-4 p-3">
+        <div class="card p-4 text-center form-group">
+          <label class="lead">Usuario</label>
+          <input class="form-control mb-2" type="text">
+          <label class="lead">Contraseña</label>
+          <input class="form-control" type="password">
+          <div class="pt-4" id="botonera">
+            <button type="button" class="mb-2 btn btn-success botonera_boton" onclick=volverIntentar() >Enviar</button>
+            <button type="button" class="mb-2 btn btn-danger botonera_boton" onclick=cancelar() >Cancelar</button>
+            
+          </div>
+          <a class="pt-4" href="registro.html">¿No tienes cuenta?</a>
+          <a href="mailto:albertofer1997@gmail.com">¿Has olvidado la contraseña?</a>
+        </div>
+      </div>
+    </div>
+    <!-- HEADER -->
+    <div class="row">
+      <div class=" py-1 pl-0 pr-0 col-2 col-sm-2 col-md-1 col-lg-1 image-bg text-center" id="icono">
+        <img class="image-adjust" alt="favicono" src="img/favicon.png">
+      </div>
+      <div class=" py-1 pt-2 col-8 col-sm-8 col-md-10 col-lg-10 header-bg header-text text-center" id="h4-visible">
+        <h4>Rebooting the Strap!</h4>
+      </div>
+      <div class=" py-1 pt-2 col-12 header-bg header-text text-center" id="h4-oculto">
+        <h4>Rebooting the Strap!</h4>
+      </div>
+      <div class="py-1 pl-0 pr-0 col-2 col-sm-2 col-md-1 col-lg-1 image-bg text-center" onclick=registro() id="perfil">
+        <img class="image-adjust" alt="perfil" src="img/perfil.png">
+      </div>
+      <div class="py-3 pl-0 pr-0 col-4 image-bg text-center" onclick=registro() id="perfil-oculto">
+        <img class="image-adjust" alt="perfil" src="img/perfil.png">
+      </div>
+      <div class="py-2 pl-0 pr-0 col-12 image-bg text-center" onclick=registro() id="perfil-final">
+        <img class="image-adjust" alt="perfil" src="img/perfil.png">
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <div class="row">
+      <div class="col-12 nav-bg">
+        <nav class="navbar navbar-expand-md navbar-dark nav-bg">
+          <button class="p-0 offset-0 col-12 offset-sm-5 col-sm-2 navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul
+              class="nav navbar-nav nav-fill nav-justified offset-1 col-10 offset-sm-2 col-sm-8 offset-md-0 col-md-12 offset-lg-0 p-0 col-lg-12 mr-auto mt-2 mt-lg-0">
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="cursos.html">Cursos</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="historia.html">Historia</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="versiones.html">Versiones</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="alternativas.html">Alternativas</a>
+              </li>
+              <li class="nav-item rounded m-1">
+                <a class="nav-link" href="foro.html">Foro<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+
+
+    <!--MAIN-->
+    <main>
+      <!--TITULO-->
+      <div class="row py-5 text-center" id="bg-color-titulo">
+        <h1 class="col-12 display-2" id="bg-bold-titulo">Registro</h1>
+      </div>
+
+    <section class="container bg-other pt-5">
+      <div class="card-deck mb-3 text-center">
+        <div class="card m-5 box-shadow ui-widget-content" id="draggable1">
+          <div class="card-header">
+            <h5 class="my-0">Gratis</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">0€<small class="text-muted"></small></h3>
+            <ul class="list-unstyled">
+              <li>Todos los videos y audios</li>
+              <li>Registro de datos</li>
+              <li>Historial videos</li>
+              <li>1 comentario al dia</li>
+              <li>No puedes comentar</li>
+              <li>Valorar comentarios</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card m-5 box-shadow ui-widget-content" id="draggable2">
+          <div class="card-header">
+            <h5 class="my-0">Profesional</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">20€ <small class="text-muted">al mes</small></h3>
+            <ul class="list-unstyled">
+              <li>Todos los videos y audios</li>
+              <li>Personalización completa</li>
+              <li>Historial videos</li>
+              <li>Modo noche</li>
+              <li>Comentarios ilimitados</li>
+              <li>Valorar comentarios</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card m-5 box-shadow ui-widget-content" id="draggable3">
+          <div class="card-header">
+            <h5 class="my-0">Experto</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">150€ <small class="text-muted">al año</small></h3>
+            <ul class="list-unstyled">
+              <li>Todos los videos y audios + extras</li>
+              <li>Personalización experta</li>
+              <li>Historial videos</li>
+              <li>Subir videos</li>
+              <li>Modo noche</li>
+              <li>Comentarios ilimitados con destacado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="card p-4 mb-4 box-shadow ui-widget-header" id="droppable">
+            <h1 class="card-title">Compra tu plan</h1>
+            <div class="card-body">
+              <p class="lead">Arrastra aquí</p><br>
+              <img class="img-fluid rounded-circle imagen-diana" src="img/diana.png" alt="diana">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!--INTRO-->
+    </main>
+    <div class="row">
+      <div class="col-md-12 text-center" id="fondo-copy">
+        <p class="p-4">© 2020, rebootingthestrap.com, Inc. o afiliados. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+
+    <!-- PIE -->
+    <div class="row pt-4 footer-bg footer-text">
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Nuestras redes sociales</p>
+        <ul class="lista-sin">
+          <li><a href="http://twitter.com">Info en Twitter</a></li>
+          <li><a href="http://facebook.com">Posts en Facebook</a></li>
+          <li><a href="http://instagram.com">Pics en Instagram</a></li>
+          <li><a href="http://youtube.com">Videos en Youtube</a></li>
+        </ul>
+        <ul class="lista-sin">
+          <li><img class="list-icon" src="img/twitter.png" alt="link"
+              onclick="window.location.href='http://twitter.com'">
+            <img class="list-icon" src="img/facebook.png" alt="link"
+              onclick="window.location.href='http://facebook.com'">
+            <img class="list-icon" src="img/instagram.png" alt="link"
+              onclick="window.location.href='http://instagram.com'">
+            <img class="list-icon" src="img/youtube.png" alt="link" onclick="window.location.href='http://youtube.com'">
+          </li>
+        </ul>
+      </div>
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Esto te puede interesar</p>
+        <ul class="lista-sin">
+          <li><a href="index.html#descripcion">¿Qué es Rebooting the Strap?</a></li>
+          <li><a href="index.html#historia">¿Cuál es nuestra historia?</a></li>
+          <li><a href="index.html#nosotros">¿Quiénes somos en RTS?</a></li>
+          <li><a href="index.html#rebooting">¿En que consiste el Rebooting?</a></li>
+          <li><a href="index.html#logotipo">El logo que nos caracteriza</a></li>
+          <li><a href="index.html#informacion-general">Más información...</a></li>
+        </ul>
+      </div>
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Trabaja con nosotros</p>
+        <ul class="lista-sin">
+          <li><a href="index.html#curriculum">Envía tu currículum</a></li>
+          <li><a href="index.html#ofertas">Últimás ofertas disponibles</a></li>
+          <li><a href="index.html#camino">Conoce tu camino profesional</a></li>
+          <li><a href="index.html#puesto">¿Qué puesto se adapta mejor a ti?</a></li>
+          <li><a href="index.html#opiniones">Opiniones de nuestros trabajadores</a></li>
+        </ul>
+      </div>
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Extras de Rebooting the Strap</p>
+        <ul class="lista-sin">
+          <li><a href="docs/guia-estilos.pdf">Guía de estilos</a></li>
+          <li><a href="docs/mejoras.pdf">Mejoras implementadas</a></li>
+          <li><a href="docs/funcionalidades.pdf">Todas las funcionalidades</a></li>
+          <li><a href="docs/fuentes.pdf">Fuentes utilizadas</a></li>
+          <li><a href="docs/secretos.pdf">Los secretos de RTS</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+
+    <!--  JavaScript Opcional -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- JavaScript propio -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#draggable1" ).draggable();
+        $( "#draggable2" ).draggable();
+        $( "#draggable3" ).draggable();
+        $( "#droppable" ).droppable({
+          drop: function( event, ui ) {
+            $( "#draggable1" ).css("display", "none");
+            $( "#draggable2" ).css("display", "none");
+            $( "#draggable3" ).css("display", "none");
+            $( this )
+                .css("background-color", "rgb(230, 230, 230)");
+            $( this )
+              .addClass( "ui-state-highlight" )
+              .find( "h1" )
+                .html("Enhorabuena");
+            $( this )
+              .addClass( "ui-state-highlight" )
+              .find( "p" )
+                .html("¡Has comprado tu plan!");
+            $( this )
+              .find( "img" )
+                .css("display", "none");
+          }
+        });
+      } );
+    </script>
+    <script src="config/js/popper.min.js"></script>
+    <script src="config/js/bootstrap.min.js"></script>
+</body>
+
+</html>

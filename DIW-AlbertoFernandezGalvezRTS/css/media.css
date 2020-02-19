@@ -1,0 +1,47 @@
+@media (max-width: 335px) {
+    #icono{
+        display: none;
+    }
+    #perfil{
+        display:none;
+    }
+    #perfil-oculto{
+        display:block;
+    }
+}
+@media (max-width: 182px) {
+    #h4-visible{
+        display: none;
+    }
+    #perfil-oculto{
+        display:none;
+    }
+    #perfil-final{
+        display: block;
+    }
+    #h4-oculto{
+        display: block;
+    }
+}
+@media (min-width: 576px){
+    #backg-index-rounded1{
+        background: linear-gradient(to bottom, orange, rgb(236, 226, 255) 80%, rgb(208, 185, 253), rgb(236, 226, 255) 80%, rgb(208, 185, 253));
+    }
+    #backg-index-rounded2{
+        background: linear-gradient(to bottom, orange, rgb(236, 226, 255) 80%, rgb(208, 185, 253), rgb(236, 226, 255) 80%, rgb(208, 185, 253));
+    }
+    #backg-index-rounded3{
+        background: linear-gradient(to bottom, orange, rgb(236, 226, 255) 80%, rgb(208, 185, 253), rgb(236, 226, 255) 80%, rgb(208, 185, 253));
+    }
+}
+@media (max-width: 576px){
+    #backg-index-rounded1{
+        background: linear-gradient(to bottom, orange, rgb(236, 226, 255));
+    }
+    #backg-index-rounded2{
+        background-color: rgb(236, 226, 255);
+    }
+    #backg-index-rounded3{
+        background: linear-gradient(to bottom, rgb(236, 226, 255) 80%, rgb(208, 185, 253));
+    }
+}

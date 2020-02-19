@@ -1,0 +1,19 @@
+#draggable1,#draggable2,#draggable3  { 
+    z-index: 1;
+    background-color: rgb(233, 236, 239);
+    border: 0.1em solid rgb(22, 3, 61);
+    cursor: pointer;
+}
+
+.card-header{
+    background-color:rgb(86, 61, 124); 
+    color: rgb(240,240,240);
+}
+#draggable1:hover,#draggable2:hover,#draggable3:hover{
+    animation-name:card-precio-anim;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+#droppable { 
+    z-index: 0;
+}

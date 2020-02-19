@@ -1,0 +1,788 @@
+<!--
+     Proyecto: Miniproyecto Final 
+     Título: Rebooting the Strap
+     Asignatura: Diseño de interfaces web
+     Archivo: index.html
+     Autor: Alberto Fernández Gálvez @albertoFer97
+     Fecha: Enero 2020
+     Descripción: Miniproyecto de Bootstrap
+-->
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<!-- Guardamos toda la llamada a otros programas-->
+
+<head>
+
+  <title>Inicio</title>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="config/css/bootstrap.min.css">
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/keyframes.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/formeter.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <!--Javascripts -->
+
+</head>
+
+<body>
+  <!-- CONTAINER -->
+
+
+  <div class="container-fluid bg-color">
+
+  <div class="row" id="identificacion">
+    <div class="offset-0 col-12 offset-md-3 col-md-6 offset-lg-4 col-lg-4 p-3">
+      <div class="card p-4 text-center form-group">
+        <label class="lead">Usuario</label>
+        <input class="form-control mb-2" type="text">
+        <label class="lead">Contraseña</label>
+        <input class="form-control" type="password">
+        <div class="pt-4" id="botonera">
+          <button type="button" class="mb-2 btn btn-success botonera_boton" onclick=volverIntentar() >Enviar</button>
+          <button type="button" class="mb-2 btn btn-danger botonera_boton" onclick=cancelar() >Cancelar</button>
+          
+        </div>
+        <a class="pt-4" href="registro.html">¿No tienes cuenta?</a>
+        <a href="mailto:albertofer1997@gmail.com">¿Has olvidado la contraseña?</a>
+      </div>
+    </div>
+  </div>
+    <!-- HEADER -->
+    <div class="row">
+      <div class=" py-1 pl-0 pr-0 col-2 col-sm-2 col-md-1 col-lg-1 image-bg text-center" id="icono">
+        <img class="image-adjust" alt="favicono" src="img/favicon.png">
+      </div>
+      <div class=" py-1 pt-2 col-8 col-sm-8 col-md-10 col-lg-10 header-bg header-text text-center" id="h4-visible">
+        <h4>Rebooting the Strap!</h4>
+      </div>
+      <div class=" py-1 pt-2 col-12 header-bg header-text text-center" id="h4-oculto">
+        <h4>Rebooting the Strap!</h4>
+      </div>
+      <div class="py-1 pl-0 pr-0 col-2 col-sm-2 col-md-1 col-lg-1 image-bg text-center"  onclick=registro() id="perfil">
+        <img class="image-adjust" alt="perfil" src="img/perfil.png">
+      </div>
+      <div class="py-3 pl-0 pr-0 col-4 image-bg text-center"  onclick=registro() id="perfil-oculto">
+        <img class="image-adjust" alt="perfil" src="img/perfil.png">
+      </div>
+      <div class="py-2 pl-0 pr-0 col-12 image-bg text-center"  onclick=registro() id="perfil-final">
+        <img class="image-adjust" alt="perfil" src="img/perfil.png">
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <div class="row">
+      <div class="col-12 nav-bg">
+        <nav class="navbar navbar-expand-md navbar-dark nav-bg">
+          <button class="p-0 offset-0 col-12 offset-sm-5 col-sm-2 navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul
+              class="nav navbar-nav nav-fill nav-justified offset-1 col-10 offset-sm-2 col-sm-8 offset-md-0 col-md-12 offset-lg-0 p-0 col-lg-12 mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active rounded m-1">
+                <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="cursos.html">Cursos</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="historia.html">Historia</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="versiones.html">Versiones</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="alternativas.html">Alternativas</a>
+              </li>
+              <li class="nav-item  rounded m-1">
+                <a class="nav-link" href="foro.html">Foro</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!--MAIN-->
+    <main>
+      <!--TITULO-->
+      <div class="row py-5 text-center" id="bg-color-titulo">
+        <h1 class="col-12 offset-sm-2 offset-lg-1 col-sm-8 col-lg-10 display-2" id="bg-bold-titulo">Inicio</h1>
+        <img class="img-fluid mx-auto rounded-circle d-none d-sm-block col-sm-2 col-lg-1 mb-3 camb-img"
+          src="img/arrow.png" alt="fecha" onclick="window.location.href='cursos.html'">
+      </div>
+
+      <!--INTRO-->
+      <div class="row">
+        <div class="text-center pt-4 col-12 col-sm-4" id="backg-index-rounded1">
+          <picture>
+            <img class="rounded-circle mb-3" src="img/informacion.png" alt="informacion" width="140" height="140" title="autor: Fotfor.com - Reconocimiento: CompartirIgual (by-sa)">
+          </picture>
+          <h2>Información general</h2>
+          <p class="d-block d-sm-none d-md-block">Todo la información que debes saber sobre nuestra web. Conoce quiénes
+            somos y de que trata esta plataforma,
+            así como nuestra historia desde la creación del logo hasta la actualidad.</p>
+          <p>
+            <a class="btn btn-secondary btn-estilo" href="#informacion-general" role="button">Ver más &raquo;</a>
+          </p>
+        </div>
+        <div class="text-center col-12 col-sm-4 p-4" id="backg-index-rounded2">
+          <picture>
+            <img class="rounded-circle mb-3" src="img/redes.jpg" alt="redes" width="140" height="140" title="autor: Google Images - Reconocimiento: CompartirIgual (by-sa)">
+          </picture>
+          <h2>Contacto y redes</h2>
+          <p class="d-block d-sm-none d-md-block">Visita nuestras redes sociales y contacta con nosotros vía movil o
+            correo electrónico. Localiza nuestra
+            ubicación y visitanos también de manera presencial.</p>
+          <p>
+            <a class="btn btn-secondary btn-estilo" href="#contacto-redes" role="button">Ver más &raquo;</a>
+          </p>
+        </div>
+        <div class="text-center col-12 col-sm-4 p-4" id="backg-index-rounded3">
+          <picture>
+            <img class="rounded-circle mb-3" src="img/trabaja.jpg" alt="trabaja con nosotros" width="140" height="140" title="autor: PICKpic.es - Reconocimiento: CompartirIgual (by-sa)">
+          </picture>
+          <h2>Trabaja con nosotros</h2>
+          <p class="d-block d-sm-none d-md-block">Puedes unirte al equipo de Rebooting the Strap superando nuestros
+            procesos de selección. Envía tu currículum
+            vitae, pero no sin antes comprobar cuál es tu rama profesional preferida.</p>
+          <p>
+            <a class="btn btn-secondary btn-estilo" href="#trabaja-nosotros" role="button">Ver más &raquo;</a>
+          </p>
+        </div>
+      </div>
+      <!--JUMBOTRON-->
+      <div class="mt-5 mx-4 jumbotron text-center" id="premium">
+        <h2 class="pb-4 card-title">Hazte premium</h2>
+        <p class="font-weight-bold">Contrata un pack anual o mensual</p>
+        <div class="row d-flex justify-content-center">
+          <div class="d-none d-sm-block col-8 p-2">
+            <p class="card-text">Infinidad de complementos nuevos te están esperando en Rebooting the Strap, no dejes
+              pasar esta oportunidad y contrata cualquiera de nuestros packs. También puedes probar
+              la versión mensual durante un mes de forma completamente gratuita. Únete a Rebooting The Strap y crece
+              como
+              diseñador web de la mano de Bootstrap!
+            </p>
+          </div>
+        </div>
+        <button class="btn blue-gradient btn-rounded btn-success m-2" id="comprar" onclick="window.location.href='registro.html'">Comprar</button>
+        <button class="btn btn-rounded btn-danger m-2" id="cancelar">Cancelar</button>
+        <hr>
+        <div class=" d-none d-sm-blockrow d-flex justify-content-center">
+          <div class="col-xl-7">
+            <p class="my-4 font-weight-bold">Versión de prueba durante un mes</p>
+          </div>
+        </div>
+        <button class="btn btn-rounded btn-secondary" id="prueba" onclick="window.location.href='registro.html#gratuito'">Prueba gratuita</button>
+      </div>
+
+      <!--TITULO BLOQUE-->
+      <div class="row">
+        <h1 class="col-12 display-4 py-5 text-center m-0" id="informacion-general">Información general</h1>
+      </div>
+
+      <!--SECCION-->
+      <section class="container bg-other pt-5">
+
+        <!--CONTENIDO SECCION-->
+        <div id="descripcion" class="row p-4">
+          <div class="col-md-8">
+            <h4>¿Qué somos?</h4>
+            <p class="lead">Rebooting the Strap es una plataforma academica online donde puedes aprender algunos conceptos de Bootstrap que no se pueden obtener de otros sitios web como <a href="https://openwebinars.net/academia/aprende/bootstrap-4-layout/">OpenWebinars</a>, <a href="http://youtube.com">YouTube</a> o incluso la <a href="https://getbootstrap.com/">web oficial de BootStrap</a>. </p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid mx-auto rounded text-center" src="img/quienes.png" alt="quienes somos">
+          </div>
+        </div>
+        <hr id="historia">
+
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="d-none d-md-block col-md-4">
+            <img class="img-fluid mx-auto rounded text-center" src="img/temporal.png" alt="historia">
+          </div>
+          <div class="col-md-8">
+            <h4>¿Cuál es nuestra historia?</h4>
+            <p class="lead">Esta web fue creada en febrero de 2020, como consecuencia de una tarea de la asignatura de
+              Diseño de Interfaces Web. Al no saber su creador en que rama de Bootstrap centrarse, decidió abarcar la
+              totalidad de este framework, creando videos academicos. </p>
+          </div>
+          <div class="d-block col-12 d-md-none">
+            <img class="img-fluid mx-auto rounded text-center" src="img/temporal.png" alt="historia">
+          </div>
+        </div>
+        <hr id="logotipo">
+
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-8">
+            <h4>¿Cómo surgió el logotipo?</h4>
+            <p class="lead">El logo surgió como un juego de palabras, es una pulsera (strap) que se está recargando
+              (rebooting) y en ella aparece la "b" de Bootstrap, y las flechas de recarga. Todo ello simboliza la
+              recarga
+              que hacen los alumnos al estudias nuestros cursos, al cambiar su forma de ver el diseño.</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid mx-auto rounded" src="img/logotipo.png" alt="logo">
+          </div>
+        </div>
+        <hr id="nosotros">
+
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="d-none d-md-block col-md-4">
+            <img class="img-fluid mx-auto rounded text-center" src="img/mifoto.png" alt="mi cara">
+          </div>
+          <div class="col-md-8">
+            <h4>¿Quienes somos?</h4>
+            <p class="lead">Su creador, Alberto Fernández Gálvez, es un estudiante de Desarrollo de Aplicaciones Web,
+              especializado en diseño y front-end. El equipo de Rebooting The Strap no tiene más miembros por el momento
+              y
+              por eso están tratando de ampliar su personal con la incorporación de nuevos licenciados en Informática.
+              Consulta el apartado de "Trabaja con nosotros" para saber más acerca de los requerimientos que necesitamos
+              para que una persona entre en nuestro equipo.</p>
+          </div>
+          <div class="d-block col-12 d-md-none">
+            <img class="img-fluid mx-auto rounded text-center" src="img/mifoto.png" alt="mi cara">
+          </div>
+        </div>
+        <hr id="rebooting">
+
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-8">
+            <h4>¿Qué es el Rebooting?</h4>
+            <p class="lead">La metodología que utilizamos en RTS es la del Rebooting, que focaliza las enseñanzas en la
+              repetición de ejemplos implicando al alumno en la realización de dichos ejemplos. Así pues se hace una
+              recarga
+              de los estudiantes al mostrarles otra manera de ver el diseño web de manera más interactiva y visual, ya
+              que
+              el diseño en sí es un bien muy preciado para nuestra sociedad, bonito, gustoso, y se debe aprender
+              disfrutando. El diseño es para un ordenador lo que dibujar para una hoja de papel.</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid rounded" src="img/metodologia.png" alt="metodos">
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <!--TITULO BLOQUE-->
+      <div class="row">
+        <h1 class="col-12 display-4 pt-5 pb-5 m-0 text-center" id="contacto-redes">Contacto y redes</h1>
+      </div>
+
+      <!--SECCION-->
+      <section class="container bg-other pt-5">
+
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-12">
+            <h4>¿Cómo contactarnos?</h4>
+            <p class="lead">Sin duda queremos que nos contactes, nos gustan las personas, nos gusta
+              la gente que quiere este bonito mundo de la informática y por eso aquí te dejamos todas las formas en las
+              que puedes dar con nosotros. No lo dudes, coge el móvil, el ordenador o el fax y danos un toque. Rebooting
+              the Strap está aquí para ti.</p>
+            <div class="row pt-5 text-center">
+              <div class="col-12 offset-lg-1 col-lg-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item list-group-item-action list-group-item-secondary active" id="list-tel-list" data-toggle="list"
+                    href="#list-tel" role="tab">Teléfono</a>
+                  <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-correo-list" data-toggle="list"
+                    href="#list-correo" role="tab">Correo electrónico</a>
+                  <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-github-list" data-toggle="list"
+                    href="#list-github" role="tab">Github</a>
+                  <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-linkedin-list" data-toggle="list"
+                    href="#list-linkedin" role="tab">LinkedIn</a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="tab-content p-4 p-lg-0" id="nav-tabContent">
+
+                  <div class="jumbotron tab-pane fade show active" id="list-tel" role="tabpanel"
+                    aria-labelledby="list-tel-list">
+                    <p class="lead">Para contactar vía telefono tienes tres alternativas:</p><br>
+                    <a href="tel:+34695252635">+34 695 25 26 35</a><br><br>
+                    <a href="tel:966185654">966 185 654</a><br><br>
+                    <a href="tel:954213255">954 213 255</a><br>
+                    <img class="img-fluid rounded-circle imagen-redes" onclick="window.location.href='tel:+34695252635'"
+                      src="img/tel.png" alt="telefono">
+                  </div>
+
+                  <div class="jumbotron tab-pane fade" id="list-correo" role="tabpanel"
+                    aria-labelledby="list-correo-list">
+                    <p class="lead">Nuestros tres correos son:</p><br>
+                    <a href="mailto:albertofer1997@gmail.com">albertofer1997@gmail.com</a><br><br>
+                    <a href="mailto:alfergal@iestetuan.es">alfergal@iestetuan.es</a><br><br>
+                    <a href="mailto:alberto_fer97@hotmail.com">alberto_fer97@hotmail.com</a><br>
+                    <img class="img-fluid rounded-circle imagen-redes"
+                      onclick="window.location.href='mailto:albertofer1997@gmail.com'" src="img/mail.png" alt="email">
+                  </div>
+
+                  <div class="jumbotron tab-pane fade" id="list-github" role="tabpanel"
+                    aria-labelledby="list-github-list">
+                    <p class="lead">Visita el GitHub oficial de Rebooting the Strap:</p><br>
+                    <a href="https://github.com/alfergal">GitHub</a><br><br>
+                    <img class="img-fluid rounded-circle imagen-redes"
+                      onclick="window.location.href='https://github.com/alfergal'" src="img/github.png" alt="github">
+                  </div>
+
+                  <div class="jumbotron tab-pane fade" id="list-linkedin" role="tabpanel"
+                    aria-labelledby="list-linkedin-list">
+                    <p class="lead">Visita el LinkedIn oficial de Rebooting the Strap:</p><br>
+                    <a
+                      href="https://www.linkedin.com/in/alberto-fern%C3%A1ndez-g%C3%A1lvez-a64b16138/">Linkedin</a><br><br>
+                    <img class="img-fluid rounded-circle imagen-redes"
+                      onclick="window.location.href='https://www.linkedin.com/in/alberto-fern%C3%A1ndez-g%C3%A1lvez-a64b16138/'"
+                      src="img/linkedin.png" alt="linkedin">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <!--CONTENIDO SECCION-->
+
+        <div class="row p-4">
+          <div class="col-md-12">
+            <h4>¿Y nuestras redes sociales?</h4>
+            <p class="lead">Por supuesto también somos "modernos"... ¿Cómo no? Y tenemos aquí todas
+              nuestras redes sociales, las clásicas... para que puedas disfrutar de nuestros posts en twitter, nuestro
+              muro
+              de facebook, nuestras pics de instagram y nuestra amplia variedad de videos de youtube.</p>
+            <div class="mt-5 text-center">
+              <img class="imagen-redes" alt="red" src="img/twitter.png"
+                onclick="window.location.href='http://twitter.com'">
+              <img class="imagen-redes" alt="red" src="img/facebook.png"
+                onclick="window.location.href='http://facebook.com'">
+              <img class="imagen-redes" alt="red" src="img/instagram.png"
+                onclick="window.location.href='http://instagram.com'">
+              <img class="imagen-redes" alt="red" src="img/youtube.png"
+                onclick="window.location.href='http://youtube.com'">
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-12">
+            <h4>¿Dónde encontrarnos?</h4>
+            <p class="lead">Nos puedes encontrar en Las Tablas, de Madrid. En este mapa puedes ver el punto exacto en el
+              que estamos. ¡Acercate algún dia si quieres conocernos personalmente!</p>
+            <div class="col-12">
+              <img class="p-5 img-fluid rounded" src="img/gps.png" alt="mapa">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--TITULO SECCION-->
+      <div class="row">
+        <h1 class="col-12 display-4 pt-5 pb-5 m-0 text-center" id="trabaja-nosotros">Trabaja con nosotros</h1>
+      </div>
+
+      <section class="container bg-other pt-5">
+        <!--CONTENIDO SECCION-->
+        <div  id="curriculum" class="row p-4">
+          <div class="col-md-12">
+            <h4>Envía tu currículum</h4>
+            <p class="lead">Si quieres unirte al equipo puedes empezar enviando tu currículum desde aquí para que nosotros podamos ver si eres apto o no para las ofertas de trabajo de las que disponemos.</p>
+            <label>Envío de currículum:</label>
+            <br>
+            <label for="file-upload" class="subir">
+            <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+            </label>
+            <input id="file-upload" onchange='cambiar()' type="file"/>
+            <div id="info"></div>
+            <button class="mt-2 btn btn-danger" onclick=volverIntentar()>Enviar</button>
+            
+          </div>
+        </div>
+        <hr id="ofertas">
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-12">
+            <h4>Últimas ofertas publicadas</h4>
+            <p class="lead">¡Aquí están nuestras últimas ofertas! Échales un vistazo a ver si alguna se adapta a tu perfil, y manda tu candidatura.</p>
+            <p>
+              <button class="btn btn-secondary btn-estilo offset-2 col-8" type="button" data-toggle="collapse" data-target="#of1" aria-expanded="false" aria-controls="collapseExample">
+                Programador Junior JavaEE 
+              </button>
+            </p>
+            <div class="collapse" id="of1">
+              <div class="card card-body border-dark">
+                Programador Junior JavaEE y Java con: Diseño técnico, desarrollo y testing de aplicaciones web basadas en Java + conocimiento de herramientas: JIRA, Confluence, SVN, Git. Duración: Hasta el 21 de marzo de 2021 (RTS - 40 HORAS - 16.000€).
+              </div>
+              <br>
+              <button class="btn btn-danger offset-4 col-4">¡Inscribirse!</button>
+            </div>
+            <br>
+            <p>
+              <button class="btn btn-secondary btn-estilo offset-2 col-8" type="button" data-toggle="collapse" data-target="#of2" aria-expanded="false" aria-controls="collapseExample">
+                Diseñador web en Bootstrap + SASS 
+              </button>
+            </p>
+            <div class="collapse" id="of2">
+              <div class="card card-body border-dark">
+                Diseñador Bootstrap con: Git, SASS, LESS, HTML, CSS, JS, JQUERY, AJAX, y más cosas. Duración: Indeterminada (RTS - 40 HORAS - 25.000€).
+              </div>
+              <br>
+              <button class="btn btn-danger offset-4 col-4">¡Inscribirse!</button>
+            </div>
+            <br>
+            <p>
+              <button class="btn btn-secondary btn-estilo offset-2 col-8" type="button" data-toggle="collapse" data-target="#of3" aria-expanded="false" aria-controls="collapseExample">
+                Fullstack developer China
+              </button>
+            </p>
+            <div class="collapse" id="of3">
+              <div class="card card-body border-dark">
+                Programador fullstack php + javascript + java para trabajar en RTS desde china . Buen sueldo y buenas vacunas. Duración: Hasta el 15 de junio de 2020  (RTS - 20 HORAS - 35.000€).
+              </div>
+              <br>
+              <button class="btn btn-danger offset-4 col-4">¡Inscribirse!</button>
+            </div>
+            <br>            
+            <p>
+              <button class="btn btn-secondary btn-estilo offset-2 col-8" type="button" data-toggle="collapse" data-target="#of4" aria-expanded="false" aria-controls="collapseExample">
+                Programador Senior C++ y C# 
+              </button>
+            </p>
+            <div class="collapse" id="of4">
+              <div class="card card-body border-dark">
+                Programador Senior C++ y C# con: POO, git, github, clases, algo de Java y JavaEE, diseño web, 10 años de experiencia en C++ y 5 años de experiencia demostrable en C#. Duración: Indefinida (RTS - 40 HORAS - 16.000€).
+              </div>
+              <br>
+              <button class="btn btn-danger  offset-4 col-4">¡Inscribirse!</button>
+            </div>
+            <br>
+          </div>
+        </div>
+        <hr id="camino">
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-12">
+            <h4>Tu camino profesional</h4>
+            <p class="lead">Es muy importante saber la dirección que debemos llevar en la vida... como una pequeña ayuda conoce aquí tu camino profesional con nuestro cuestionario online. No suele equivocarse. Rellena todos los campos hasta completar la barra de progreso.</p>
+          </div>
+        </div>
+        <div class="row px-5 pt-2 pb-5" id="bloque-meter">
+            <div class="col meter">
+                <div id="percentage"></div>
+            </div>
+        </div>
+          <div class="offset-1 col-10">
+            <img id="resultados" class="mt-0 pt-0 img-fluid rounded" src="" alt="tipo">
+            <form id="cuestionario" action="index.html" method="post">
+                <div  class="form-group"> 
+                    <label>Nombre</label><br>
+                    <input type="text" name="first" class="required form-control"/>
+                </div>
+                <div class="form-group"> 
+                    <label>Apellido</label><br>
+                    <input type="text" name="last" class="required form-control"/>
+                </div>
+                <div class="form-group">
+                  <label>Correo electrónico</label>
+                  <div class="input-group">
+                  <input type="email" class="required form-control">
+                  </div>
+                </div>
+                <div class="form-check">
+                    <label>Sexo</label><br>
+                    <input type="radio" name="sexo" value="0" class="required" />
+                    <label class="radio-inline">Hombre</label><br>
+                    <input type="radio" name="sexo" value="1" class="required" />
+                    <label class="radio-inline">Mujer</label>
+                </div>
+                <div class="form-check">
+                    <label>¿Que prefieres?</label><br>
+                    <input type="radio" name="preferir" value="0" class="required" />
+                    <label class="radio-inline">Desplegar aplicaciones web</label><br>
+                    <input type="radio" name="preferir" value="1" class="required" />
+                    <label class="radio-inline">Diseñar aplicaciones web</label>
+                </div>
+
+                <div class="form-group">
+                  <label>¿Cuál es tu nivel de estudios?</label>
+                  <select class="required form-control">
+                    <option ></option>
+                    <option value="1">Bachillerato</option>
+                    <option value="2">Grado superior</option>
+                    <option value="3">Grado universitario</option>
+                    <option value="4">Máster</option>
+                    <option value="5">Doctorado</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                <label>Expectativas salariales</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>¿Cuales son tus mayores cualidades? (seleccione varias)</label>
+                  <select multiple class="required form-control">
+                    <option>Perseverancia</option>
+                    <option>Buena actitud</option>
+                    <option>Creatividad</option>
+                    <option>Elocuencia</option>
+                    <option>Tolerancia</option>
+                    <option>Autoexigencia</option>
+                    <option>Detallismo</option>
+                    <option>Perfeccionismo</option>
+                    <option>Liderazgo</option>
+                    <option>Compromiso</option>
+                    <option>Sinceridad</option>
+                    <option>Disposición</option>
+                    <option>Facilidad de aprendizaje</option>
+                    <option>Madurez</option>
+                    <option>Autocontrol</option>
+                    <option>Empatía</option>
+                    <option>Disciplina</option>
+                    <option>Paciencia</option>
+                    <option>Humildad</option>
+                    <option>Determinación</option>
+                    <option>Bondad</option>
+                    <option>Atención</option>
+                    <option>Organización</option>
+                    <option>Puntualidad</option>
+                    <option>Carisma</option>
+                    <option>Adaptabilidad</option>
+                    <option>Confiabilidad</option>
+                    <option>Fortaleza mental</option>
+                    <option>Calma</option>
+                    <option>Agilidad</option>
+                    <option>Amabilidad</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Defínete en una linea</label>
+                  <textarea class="form-control required" rows="3"></textarea>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="newsletter" value="1" class="required form-check-input" />
+                    <label class="form-check-label">Deseo enviar los resultados</label>
+                </div>
+            </form>
+            <button class="btn btn-secondary btn-estilo"id="volver-intentar" onclick=volverIntentar() type="submit">Volver a intentar</button>
+          </div>
+        <hr id="puesto">
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-12">
+            <h4>Tu puesto</h4>
+            <p class="lead">Mira que puesto se ajusta mejor a ti en nuestra lista de posiciones profesionales, y busca sus ofertas específicas.</p>
+            <div class="row pt-5 text-center">
+              <div class="col-12 offset-lg-1 col-lg-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item list-group-item-action list-group-item-secondary active" id="list-trabajo01-list" data-toggle="list"
+                    href="#list-trabajo01" role="tab">Programador Junior JavaEE</a>
+                  <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-trabajo02-list" data-toggle="list"
+                    href="#list-trabajo02" role="tab">Diseñador web en Bootstrap + SASS</a>
+                  <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-trabajo03-list" data-toggle="list"
+                    href="#list-trabajo03" role="tab">Fullstack developer China</a>
+                  <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-trabajo04-list" data-toggle="list"
+                    href="#list-trabajo04" role="tab">Programador Senior C++ y C#</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-trabajo05-list" data-toggle="list"
+                    href="#list-trabajo05" role="tab">Diseñador HTML, CSS y JS tiempo parcial</a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="tab-content p-4 p-lg-0" id="nav-tabContent">
+
+                  <div class="jumbotron tab-pane fade show active" id="list-trabajo01" role="tabpanel"
+                    aria-labelledby="list-trabajo01-list">
+                    <p>Programador Junior JavaEE y Java con: Diseño técnico, desarrollo y testing de aplicaciones web basadas en Java + conocimiento de herramientas: JIRA, Confluence, SVN, Git.<br><br>
+                    Duración: Hasta el 21 de marzo de 2021</p>
+                  </div>
+
+                  <div class="jumbotron tab-pane fade" id="list-trabajo02" role="tabpanel"
+                    aria-labelledby="list-trabajo02-list">
+                    <p>Diseñador Bootstrap con: Git, SASS, LESS, HTML, CSS, JS, JQUERY, AJAX, y más cosas.<br><br>
+                    Duración: Indeterminada</p>
+                  </div>
+
+                  <div class="jumbotron tab-pane fade" id="list-trabajo03" role="tabpanel"
+                    aria-labelledby="list-trabajo03-list">
+                    <p>Programador fullstack php + javascript + java para trabajar en RTS desde china . Buen sueldo y buenas vacunas.<br><br>
+                    Duración: Hasta el 15 de junio de 2020</p>
+                  </div>
+
+                  <div class="jumbotron tab-pane fade" id="list-trabajo04" role="tabpanel"
+                    aria-labelledby="list-trabajo04-list">
+                    <p>Programador Senior C++ y C# con: POO, git, github, clases, algo de Java y JavaEE, diseño web, 10 años de experiencia en C++ y 5 años de experiencia demostrable en C#.<br><br>
+                    Duración: Indefinida</p>
+                  </div>
+
+                  <div class="jumbotron tab-pane fade" id="list-trabajo05" role="tabpanel"
+                    aria-labelledby="list-trabajo05-list">
+                    <p>Diseñador web con conocimientos básicos, sin experiencia. 18000€ netos al año.
+                    <br><br>
+                    Duración: 2 meses + 4 meses</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr id="opiniones">
+        <!--CONTENIDO SECCION-->
+        <div class="row p-4">
+          <div class="col-md-12">
+            <h4>Nuestros trabajadores</h4>
+            <p class="lead">¿Qué dicen nuestros trabajadores de Rebooting the Strap? Sus opiniones son importantes para nosotros... ¡pero también para tí! Consultalas y si te convencen... ¡únete!</p>
+
+            <div class="card border-estilo mb-3">
+              <div class="small card-header"><img class="img-perfil img-fluid mx-auto rounded" src="img/mifotoPerfil.png" alt="mi cara"><br><br>Alberto Fernández</div>
+              <div class="card-body text-estilo">
+                <h5 class="card-title">Salario</h5>
+                <p class="card-text">Bueno, no cobro nada pero la verdad es que se vive bastante bien, no me quejo.</p>
+                <button type="button" class="btn btn-estilo">
+                  Me gusta <span class="badge badge-light">5</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="card border-estilo mb-3">
+
+              <div class="small card-header"><img class="img-perfil img-fluid mx-auto rounded" src="img/mifotoPerfil.png" alt="mi cara"><br><br>Alberto Fernández</div>
+              <div class="card-body text-estilo">
+                <h5 class="card-title">Trato con compañeros</h5>
+                <p class="card-text">El trato es bueno... al ser solo uno no me suelo pelear conmigo mismo</p>
+                <button type="button" class="btn btn-estilo">
+                  Me gusta <span class="badge badge-light">3</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="card border-estilo mb-3">
+
+              <div class="small card-header"><img class="img-perfil img-fluid mx-auto rounded" src="img/ismael.png" alt="mi cara"><br><br>Ismael Villa</div>
+              <div class="card-body text-estilo">
+                <h5 class="card-title">Cantidad de trabajo</h5>
+                <p class="card-text">Al empezar las jornadas se alargaban a más de 10 horas, pero transcurrido un año, se vive bastante bien, sobretodo porque los nuevos trabajan lo que nosotros ya no.</p>
+                <button type="button" class="btn btn-estilo">
+                  Me gusta <span class="badge badge-light">1</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="card border-estilo mb-3">
+              <div class="small card-header"><img class="img-perfil img-fluid mx-auto rounded" src="img/mifotoPerfil.png" alt="mi cara"><br><br>Alberto Fernández</div>
+              <div class="card-body text-estilo">
+                <h5 class="card-title">Jornada</h5>
+                <p class="card-text">Se trabaja bastante, pero es reconfortante.</p>
+                <button type="button" class="btn btn-estilo">
+                  Me gusta <span class="badge badge-light">7</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <br>
+
+      </section>
+    </main>
+
+
+    <div class="row">
+      <div class="col-md-12 text-center" id="fondo-copy">
+        <p class="p-4">© 2020, rebootingthestrap.com, Inc. o afiliados. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+
+    <!-- PIE -->
+    <div class="row pt-4 footer-bg footer-text">
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Nuestras redes sociales</p>
+        <ul class="lista-sin">
+          <li><a href="http://twitter.com">Info en Twitter</a></li>
+          <li><a href="http://facebook.com">Posts en Facebook</a></li>
+          <li><a href="http://instagram.com">Pics en Instagram</a></li>
+          <li><a href="http://youtube.com">Videos en Youtube</a></li>
+        </ul>
+        <ul class="lista-sin">
+          <li><img class="list-icon" src="img/twitter.png" alt="link"
+              onclick="window.location.href='http://twitter.com'">
+            <img class="list-icon" src="img/facebook.png" alt="link"
+              onclick="window.location.href='http://facebook.com'">
+            <img class="list-icon" src="img/instagram.png" alt="link"
+              onclick="window.location.href='http://instagram.com'">
+            <img class="list-icon" src="img/youtube.png" alt="link" onclick="window.location.href='http://youtube.com'">
+          </li>
+        </ul>
+      </div>
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Esto te puede interesar</p>
+        <ul class="lista-sin">
+          <li><a href="index.html#descripcion">¿Qué es Rebooting the Strap?</a></li>
+          <li><a href="index.html#historia">¿Cuál es nuestra historia?</a></li>
+          <li><a href="index.html#nosotros">¿Quiénes somos en RTS?</a></li>
+          <li><a href="index.html#rebooting">¿En que consiste el Rebooting?</a></li>
+          <li><a href="index.html#logotipo">El logo que nos caracteriza</a></li>
+          <li><a href="index.html#informacion-general">Más información...</a></li>
+        </ul>
+      </div>
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Trabaja con nosotros</p>
+        <ul class="lista-sin">
+          <li><a href="index.html#curriculum">Envía tu currículum</a></li>
+          <li><a href="index.html#ofertas">Últimás ofertas disponibles</a></li>
+          <li><a href="index.html#camino">Conoce tu camino profesional</a></li>
+          <li><a href="index.html#puesto">¿Qué puesto se adapta mejor a ti?</a></li>
+          <li><a href="index.html#opiniones">Opiniones de nuestros trabajadores</a></li>
+        </ul>
+      </div>
+      <div class="m-0 p-0 col-12 col-sm-6 col-md-3 col-lg-3">
+        <p class="p-listas">Extras de Rebooting the Strap</p>
+        <ul class="lista-sin">
+          <li><a href="docs/guia-estilos.pdf">Guía de estilos</a></li>
+          <li><a href="docs/mejoras.pdf">Mejoras implementadas</a></li>
+          <li><a href="docs/funcionalidades.pdf">Todas las funcionalidades</a></li>
+          <li><a href="docs/fuentes.pdf">Fuentes utilizadas</a></li>
+          <li><a href="docs/secretos.pdf">Los secretos de RTS</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--  JavaScript Opcional -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- JavaScript propio -->
+  <script src="js/jquery.js"></script>
+  <script src="js/formeter.js"></script>
+  <script>
+            $(function(){
+                $('#percentage').formProgress({
+                    speed : 200,
+                    style : 'green',
+                    bubble : true,
+                    minPercent : 100,
+                    message : 'Rellena todos los campos !',
+                    selector : '.required'
+                });
+            });
+  </script>
+  <script src="js/funciones.js"></script>
+  <script src="config/js/popper.min.js"></script>
+  <script src="config/js/bootstrap.min.js"></script>
+</body>
+</html>
